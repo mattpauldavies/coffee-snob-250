@@ -1,0 +1,71 @@
+/* Palette sampled from the "Ride with Matt&Helen" title card. */
+:root{
+  /* --- base ramp: warm charcoal, never pure black --- */
+  --mh-ink-900:#141412;
+  --mh-ink-800:#1E1D1B;
+  --mh-ink-700:#2A2926;
+  --mh-ink-600:#3A3936;
+  --mh-ink-500:#57554F;
+  --mh-ink-400:#7C7970;
+
+  /* --- base ramp: warm paper, never pure white --- */
+  --mh-paper-100:#FFFDF6;
+  --mh-paper-200:#F4F1E7;
+  --mh-paper-300:#ECEAE3;
+  --mh-paper-400:#D6D2C6;
+
+  /* --- brand chroma --- */
+  --mh-yellow:#FBBF3C;
+  --mh-yellow-deep:#E8A423;
+  --mh-orange:#F5892F;
+  --mh-red:#DE4A3E;
+  --mh-red-deep:#B93A30;
+
+  /* --- semantic surfaces --- */
+  --surface-page:var(--mh-ink-800);
+  --surface-page-alt:var(--mh-ink-900);
+  --surface-card:var(--mh-ink-700);
+  --surface-card-raised:var(--mh-ink-600);
+  --surface-inverse:var(--mh-paper-300);
+  --surface-accent:var(--mh-yellow);
+  --surface-hot:var(--mh-red);
+
+  /* --- semantic text --- */
+  --text-display:var(--mh-paper-300);
+  --text-body:var(--mh-paper-300);
+  --text-muted:var(--mh-ink-400);
+  --text-accent:var(--mh-yellow);
+  --text-hot:var(--mh-red);
+  --text-on-accent:var(--mh-ink-900);
+  --text-on-inverse:var(--mh-ink-900);
+  --text-link:var(--mh-yellow);
+  --text-link-hover:var(--mh-orange);
+
+  /* --- semantic lines --- */
+  --line-hairline:var(--mh-ink-600);
+  --line-accent:var(--mh-yellow);
+  --line-hot:var(--mh-red);
+  --line-ghost:rgba(251,191,60,.35);
+
+  /* --- status: borrowed straight from the brand chroma, no new hues --- */
+  --status-live:var(--mh-red);
+  --status-new:var(--mh-yellow);
+  --status-done:var(--mh-ink-400);
+}
+
+/* Light scope: paper background, same chroma. Apply on any container. */
+.mh-theme-paper{
+  --surface-page:var(--mh-paper-200);
+  --surface-page-alt:var(--mh-paper-300);
+  --surface-card:var(--mh-paper-100);
+  --surface-card-raised:var(--mh-paper-100);
+  --surface-inverse:var(--mh-ink-800);
+  --text-display:var(--mh-ink-900);
+  --text-body:var(--mh-ink-800);
+  --text-muted:var(--mh-ink-500);
+  --text-accent:var(--mh-red);
+  --text-on-inverse:var(--mh-paper-300);
+  --text-link:var(--mh-red);
+  --text-link-hover:var(--mh-orange);
+  --line-hairline:var(--mh-paper-400);
+}

@@ -1,0 +1,32 @@
+:root{
+  --font-display:"Archivo Black","Arial Black",system-ui,sans-serif;
+  --font-mono:"Monocraft","IBM Plex Mono",ui-monospace,monospace;
+  --font-body:"Monocraft","IBM Plex Mono",ui-monospace,monospace;
+
+  /* Display: tight, heavy, always set in caps-or-sentence-case Archivo Black */
+  --type-display-1:clamp(56px,9vw,132px);
+  --type-display-2:clamp(40px,6vw,88px);
+  --type-display-3:clamp(28px,4vw,56px);
+  --type-title:32px;
+  --type-heading:22px;
+  --type-subhead:17px;
+  --type-body:15px;
+  --type-small:13px;
+  --type-micro:11px;
+
+  --leading-display:0.88;
+  --leading-title:1.05;
+  --leading-body:1.6;
+  --leading-tight:1.25;
+
+  --tracking-display:-0.02em;
+  --tracking-body:0em;
+  --tracking-label:0.14em;   /* mono labels are always letterspaced caps */
+
+  /* Pixel fonts must land on whole pixels. Use these mono steps, not arbitrary sizes. */
+  --mono-step-1:11px;
+  --mono-step-2:13px;
+  --mono-step-3:15px;
+  --mono-step-4:18px;
+  --mono-step-5:22px;
+}
