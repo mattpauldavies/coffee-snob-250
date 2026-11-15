@@ -27,6 +27,19 @@ export function RouteMap({ activeLeg, onHoverLeg }: RouteMapProps) {
         className={styles.map}
         data-has-active={activeLeg !== null}
       >
+        {/* Two passes, so every node paints above every line. */}
+        {legs.map((leg) => (
+          <g
+            key={leg.number}
+            className={styles.leg}
+            data-kind={leg.kind}
+            data-active={activeLeg === leg.number}
+            onMouseEnter={() => onHoverLeg(leg.number)}
+            onMouseLeave={() => onHoverLeg(null)}
+          >
+            <polyline className={styles.line} points={points(leg)} />
+          </g>
+        ))}
         {legs.map((leg) => {
           const [nodeX, nodeY] = leg.node;
           const active = activeLeg === leg.number;
@@ -39,7 +52,6 @@ export function RouteMap({ activeLeg, onHoverLeg }: RouteMapProps) {
               onMouseEnter={() => onHoverLeg(leg.number)}
               onMouseLeave={() => onHoverLeg(null)}
             >
-              <polyline className={styles.line} points={points(leg)} />
               {active && (
                 <rect className={styles.halo} x={nodeX - 14} y={nodeY - 14} width={28} height={28} />
               )}

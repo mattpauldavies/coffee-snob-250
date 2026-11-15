@@ -1,4 +1,4 @@
-import { episode, nav } from '../content/episode';
+import { nav } from '../content/episode';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { useScrolledPast } from '../hooks/useScrolledPast';
 import styles from './SiteHeader.module.css';
@@ -16,7 +16,7 @@ export function SiteHeader() {
         Matt<span className={styles.ampersand}>&amp;</span>Helen
       </a>
 
-      {scrolled ? (
+      {scrolled && (
         <nav className={styles.nav} aria-label="Sections">
           {nav.map((item) => (
             <a
@@ -29,8 +29,6 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-      ) : (
-        <span className={`label ${styles.episode}`}>{episode.number}</span>
       )}
     </header>
   );

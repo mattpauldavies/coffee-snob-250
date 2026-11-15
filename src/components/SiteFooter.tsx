@@ -40,9 +40,7 @@ export function SiteFooter() {
           <span className={styles.wordmark}>
             Matt<span className={styles.ampersand}>&amp;</span>Helen
           </span>
-          <span>
-            {episode.number} · {episode.title}
-          </span>
+          <span>{episode.title}</span>
         </div>
       </div>
     </footer>

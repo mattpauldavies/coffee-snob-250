@@ -1,7 +1,7 @@
 # coffee-snob-250
 
 A 250 mile motorcycle route for coffee powered adventure — the episode page for
-**The Coffee Snob 250** (Matt&Helen, Ep 04), built as a single page app.
+**The Coffee Snob 250** (Matt&Helen), built as a single page app.
 
 Edinburgh → Isle of Bute → Edinburgh. Two ferries, three coffee stops, ten hours
 door to door.

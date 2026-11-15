@@ -48,7 +48,6 @@ export type NavItem = { id: string; label: string };
 
 export const episode = {
   series: 'S01',
-  number: 'Ep 04',
   title: 'The Coffee Snob 250',
   kicker: 'Edinburgh → Isle of Bute → Edinburgh',
   standfirst:
@@ -254,6 +253,5 @@ export const footer = {
       handle: '@matthelenmoto',
       href: 'https://www.instagram.com/matthelenmoto/',
     },
-    { label: 'TikTok', handle: '@matthelenmoto', href: 'https://www.tiktok.com/@matthelenmoto' },
   ],
 };
