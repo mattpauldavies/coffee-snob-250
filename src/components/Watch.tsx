@@ -46,7 +46,7 @@ export function Watch() {
                   </span>
                 </button>
                 <span className={`label ${styles.caption}`}>
-                  {episode.runtime} · Plays here, on YouTube
+                  {episode.runtime} · Watch now
                 </span>
               </div>
             ) : (
@@ -55,7 +55,7 @@ export function Watch() {
                   ▶
                 </span>
                 <span className={`label ${styles.caption}`}>
-                  The film goes live here · {episode.runtime}
+                  Coming soon!
                 </span>
               </div>
             )}

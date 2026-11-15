@@ -52,15 +52,15 @@ export const episode = {
   title: 'The Coffee Snob 250',
   kicker: 'Edinburgh → Isle of Bute → Edinburgh',
   standfirst:
-    'How far would you ride for a good coffee? We rode 250 miles and crossed two ferries to find out.',
+    'How far would you ride for a good coffee?',
   runtime: '24 min',
   /**
-   * Drop the YouTube video id in here and the watch section swaps its
-   * placeholder for a click-to-play embed. Null until the film is up.
+   * The film's YouTube video id. With it set, the watch section shows a
+   * click-to-play embed; null falls back to the "goes live here" placeholder.
    */
-  youtubeId: null as string | null,
+  youtubeId: 'padi2cHAwYg' as string | null,
   watchIntro:
-    'The whole ride, cut down to 24 minutes. Two ferries, three coffees, one road that made the day.',
+    'We rode our Triumph Tiger Sports from Edinburgh to the Isle of Bute in search of amazing coffee! And you can watch the whole thing on YouTube or just ride the route yourself.',
   googleMapsUrl: 'https://maps.app.goo.gl/afijBv47iwPEdSez7',
   youtubeUrl: 'https://www.youtube.com/@matthelenmoto',
   subscribeUrl: 'https://www.youtube.com/@matthelenmoto?sub_confirmation=1',
@@ -77,13 +77,13 @@ export const stats: Stat[] = [
   { value: '250', label: 'Miles' },
   { value: '2', label: 'Ferries' },
   { value: '3', label: 'Coffee stops' },
-  { value: '10', label: 'Hours door to door' },
+  { value: '12', label: 'Hours door to door' },
 ];
 
 export const route = {
   kicker: 'The route',
-  title: 'A 250 mile loop, seven legs',
-  body: 'Anticlockwise out of Edinburgh, onto Bute, off the top of it, and home the long way round Loch Lomond. Distances are approximate.',
+  title: 'A 250 mile loop',
+  body: 'Anticlockwise out of Edinburgh, over to the Isle of Bute, and home the long way via Loch Lomond.',
   /** The map's viewBox, matched to the projected coordinates below. */
   viewBox: '-2 12 336 190',
   description:
@@ -158,7 +158,7 @@ export const legs: Leg[] = [
     kind: 'ride',
     title: 'Kyles of Bute to Loch Lomond',
     meta: '~55 miles · 2h',
-    body: 'The best riding of the day. The A8003 climbs hard away from the Kyles to the viewpoint, which is worth stopping at even if the cloud is down. Then Loch Fyne, the long pull over the Rest and Be Thankful, and Loch Lomond on the way back east.',
+    body: 'The best riding of the day. The A8003 climbs away from the Kyles to the viewpoint, which is worth stopping at even if the cloud is down. Then Loch Fyne, over the Rest and Be Thankful, and Loch Lomond on the way back east.',
     badges: ['Ride this bit twice'],
     standout: true,
     path: [
@@ -223,7 +223,7 @@ export const notes = {
   title: 'Three things to get right',
   smallprint:
     'Ferry frequencies and fares above are approximate. Check current timetables before you go.',
-  caption: 'Stop three. Still standing.',
+  caption: 'Have fun and let us know what you think of the route.',
 };
 
 export const noteItems: Note[] = [
@@ -246,7 +246,7 @@ export const noteItems: Note[] = [
 ];
 
 export const footer = {
-  title: 'We tell stories, not content. One film a month.',
+  title: 'Follow for more motorcycle adventures.',
   links: [
     { label: 'YouTube', handle: '@matthelenmoto', href: 'https://www.youtube.com/@matthelenmoto' },
     {
