@@ -1,0 +1,17 @@
+:root{
+  /* Motion is stepped, never smooth. Frames, not curves. */
+  --ease-step-2:steps(2,end); /* @kind other */
+  --ease-step-4:steps(4,end); /* @kind other */
+  --ease-step-8:steps(8,end); /* @kind other */
+  --ease-snap:cubic-bezier(.2,.9,.2,1); /* @kind other */
+
+  --dur-instant:60ms; /* @kind other */
+  --dur-fast:120ms; /* @kind other */
+  --dur-base:200ms; /* @kind other */
+  --dur-slow:420ms; /* @kind other */
+
+  --blink:1000ms; /* @kind other */   /* cursor / LIVE dot cadence */
+}
+@keyframes mh-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes mh-nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes mh-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}

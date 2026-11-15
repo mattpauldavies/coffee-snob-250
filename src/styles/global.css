@@ -1,0 +1,108 @@
+@import "../design-system/index.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* Anchored sections clear the sticky header. */
+  scroll-padding-top: 76px;
+}
+
+body {
+  margin: 0;
+  background: var(--mh-ink-900);
+  color: var(--text-body);
+  font: 400 var(--mono-step-3) / var(--leading-body) var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-link-hover);
+}
+
+/* Focus reads as a selection marquee: square, yellow, offset. */
+:focus-visible {
+  outline: var(--border-chunky) solid var(--mh-yellow);
+  outline-offset: var(--focus-offset);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-display);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* --- shared primitives ------------------------------------------------- */
+
+/* Uppercase Monocraft label. The system's only uppercase voice. */
+.label {
+  font-size: var(--mono-step-1);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionPad {
+  padding: clamp(40px, 7vw, 88px) var(--gutter-page);
+}
+
+.skipLink {
+  position: absolute;
+  left: var(--gutter-page);
+  top: 12px;
+  z-index: 40;
+  transform: translateY(-200%);
+  background: var(--mh-yellow);
+  color: var(--mh-ink-900);
+  border: var(--border-chunky) solid var(--mh-ink-900);
+  padding: 10px 16px;
+  font-size: var(--mono-step-1);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+  color: var(--mh-ink-900);
+}
+
+/* Motion in this brand is stepped; when it is not wanted, it is gone. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

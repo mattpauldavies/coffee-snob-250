@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- A route node from the map: yellow sticker square, hard ink offset. -->
+  <rect width="32" height="32" fill="#141412"/>
+  <rect x="10" y="10" width="18" height="18" fill="#141412"/>
+  <rect x="5" y="5" width="18" height="18" fill="#FBBF3C" stroke="#141412" stroke-width="2"/>
+  <rect x="9" y="9" width="10" height="10" fill="#DE4A3E"/>
+</svg>

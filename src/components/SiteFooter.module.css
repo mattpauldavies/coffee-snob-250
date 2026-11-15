@@ -1,0 +1,71 @@
+.footer {
+  padding: clamp(40px, 7vw, 88px) var(--gutter-page) clamp(32px, 5vw, 56px);
+}
+
+.inner {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+.pitch {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 52ch;
+}
+
+.title {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 0.98;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  border-top: var(--border-chunky) solid var(--mh-ink-700);
+  padding-top: 24px;
+}
+
+.link {
+  flex: 1 1 180px;
+  background: var(--mh-ink-800);
+  padding: 20px;
+  font-size: var(--mono-step-3);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--mh-paper-300);
+  transition: background var(--dur-fast) var(--ease-step-2);
+}
+
+.link:hover {
+  background: var(--mh-ink-600);
+  color: var(--mh-paper-300);
+}
+
+.handle {
+  font-size: var(--mono-step-1);
+  color: var(--mh-ink-400);
+}
+
+.colophon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--mh-ink-400);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  font-size: 14px;
+  color: var(--mh-paper-300);
+}
+
+.ampersand {
+  color: var(--mh-yellow);
+}

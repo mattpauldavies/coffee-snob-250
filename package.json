@@ -1,0 +1,25 @@
+{
+  "name": "coffee-snob-250",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "The Coffee Snob 250 — a 250 mile motorcycle route for coffee powered adventure",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --build && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --build --force"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.2"
+  }
+}

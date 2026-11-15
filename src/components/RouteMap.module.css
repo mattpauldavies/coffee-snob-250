@@ -1,0 +1,107 @@
+.figure {
+  margin: 0;
+  background: var(--mh-ink-900);
+  border: var(--border-chunky) solid var(--mh-ink-700);
+  padding: clamp(16px, 3vw, 28px);
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  display: block;
+}
+
+/* Legs fade back while one of their number is being read. */
+.leg {
+  transition: opacity var(--dur-fast) var(--ease-step-2);
+  cursor: pointer;
+}
+
+.map[data-has-active='true'] .leg[data-active='false'] {
+  opacity: 0.45;
+}
+
+.line {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: square;
+  stroke-width: 3;
+}
+
+.leg[data-kind='ride'] .line {
+  stroke: var(--mh-yellow);
+}
+
+.leg[data-kind='ferry'] .line {
+  stroke: var(--mh-red);
+  stroke-dasharray: 6 6;
+}
+
+.leg[data-active='true'] .line {
+  stroke: var(--mh-paper-100);
+  stroke-width: 5;
+}
+
+.node {
+  stroke: var(--mh-ink-900);
+  stroke-width: 2;
+}
+
+.leg[data-kind='ride'] .node {
+  fill: var(--mh-yellow);
+}
+
+.leg[data-kind='ferry'] .node {
+  fill: var(--mh-red);
+}
+
+.nodeLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.leg[data-kind='ride'] .nodeLabel {
+  fill: var(--mh-ink-900);
+}
+
+.leg[data-kind='ferry'] .nodeLabel {
+  fill: var(--mh-paper-100);
+}
+
+/* The selection marquee around the active node. */
+.halo {
+  fill: none;
+  stroke: var(--mh-paper-100);
+  stroke-width: 2;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+  color: var(--mh-ink-400);
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.keyRidden,
+.keyFerry {
+  width: 22px;
+  height: 3px;
+}
+
+.keyRidden {
+  background: var(--mh-yellow);
+}
+
+.keyFerry {
+  background: repeating-linear-gradient(90deg, var(--mh-red) 0 5px, transparent 5px 10px);
+}

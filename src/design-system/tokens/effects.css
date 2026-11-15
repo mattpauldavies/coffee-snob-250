@@ -1,0 +1,27 @@
+:root{
+  /* Radii: the brand is square. Only chips/pills round, and only fully. */
+  --radius-none:0;
+  --radius-pill:999px;
+
+  /* Borders are chunky and flat - 3px is the house weight, 2px for small parts. */
+  --border-hairline:1px;
+  --border-standard:2px;
+  --border-chunky:3px;
+  --border-slab:4px;
+
+  /* Hard offset shadows only. No blur anywhere in the brand. */
+  --shadow-sticker:6px 6px 0 var(--mh-ink-900);
+  --shadow-sticker-sm:3px 3px 0 var(--mh-ink-900);
+  --shadow-sticker-lg:10px 10px 0 var(--mh-ink-900);
+  --shadow-press:2px 2px 0 var(--mh-ink-900);
+  --shadow-inset-lip:inset 0 -3px 0 rgba(0,0,0,.35);
+
+  /* Focus ring: yellow, square, offset - reads as a selection box. */
+  --focus-ring:0 0 0 3px var(--mh-yellow);
+  --focus-offset:2px; /* @kind spacing */
+
+  /* Textures. Scanlines sit over dark surfaces at low opacity. */
+  --texture-scanline:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0px,rgba(0,0,0,.22) 1px,transparent 1px,transparent 3px); /* @kind other */
+  --texture-grid:repeating-linear-gradient(0deg,rgba(251,191,60,.07) 0 1px,transparent 1px 24px),repeating-linear-gradient(90deg,rgba(251,191,60,.07) 0 1px,transparent 1px 24px); /* @kind other */
+  --texture-checker:repeating-conic-gradient(var(--mh-ink-700) 0% 25%,var(--mh-ink-800) 0% 50%) 0 0/16px 16px; /* @kind other */
+}

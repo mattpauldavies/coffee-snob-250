@@ -1,0 +1,58 @@
+.hero {
+  position: relative;
+  min-height: 88svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* The class lands on the <img>; <picture> is unpositioned, so this sizes
+   against the section. */
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.12) brightness(0.56);
+}
+
+.wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 18, 0.72) 0%,
+    rgba(20, 20, 18, 0.12) 34%,
+    rgba(20, 20, 18, 0.96) 100%
+  );
+}
+
+.body {
+  position: relative;
+  padding: 120px var(--gutter-page) clamp(32px, 6vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 3vw, 26px);
+  max-width: var(--page-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kicker {
+  color: var(--mh-yellow);
+}
+
+.title {
+  font-size: clamp(46px, 11vw, 112px);
+  line-height: 0.9;
+  color: var(--mh-paper-100);
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+.standfirst {
+  color: var(--mh-paper-400);
+  max-width: 46ch;
+}
