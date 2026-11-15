@@ -99,10 +99,35 @@ SOURCE_DIR=/path/to/originals node scripts/optimise-images.mjs
 
 ## Deploying
 
-`npm run build` writes a static `dist/` — any static host will do. Two things to
-set for the domain it lands on:
+The site is on GitHub Pages at **https://coffeesnob250.com**, built and
+published by `.github/workflows/deploy.yml` on every push to `main`. There is
+nothing to run by hand; the workflow does `npm ci && npm run build` and
+publishes `dist/`.
 
-- `og:image` in `index.html` is a relative path. Most crawlers resolve it, but
-  an absolute `https://…` URL is safer once the domain is known.
-- Ferry fares and frequencies on the page are approximate and dated; they are
-  in `content/episode.ts` when they need refreshing.
+`npm run build` typechecks before it bundles, so a type error fails the deploy
+rather than shipping.
+
+### One-time setup
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+   Without this the workflow runs and the deploy step fails.
+2. **DNS for `coffeesnob250.com`.** Four `A` records and four `AAAA` records on
+   the apex, pointing at GitHub's Pages servers (the current addresses are in
+   [GitHub's custom domain docs][pages-dns]), plus a `CNAME` on `www` pointing
+   at `mattpauldavies.github.io`.
+3. **Settings → Pages → Custom domain**, then tick *Enforce HTTPS* once the
+   certificate has been issued — it can take a few minutes after DNS resolves.
+
+`public/CNAME` holds the domain and is copied into `dist/` on every build, so
+Pages does not lose the custom domain when it redeploys. Changing the domain
+means changing that file, not just the setting.
+
+[pages-dns]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
+### Notes
+
+- `base` in `vite.config.ts` is `'./'`, so the build works at a domain root and
+  at a subpath. That means the `github.io/coffee-snob-250/` URL keeps working as
+  a preview if the custom domain is ever removed.
+- Ferry fares and frequencies on the page are approximate and dated; they are in
+  `content/episode.ts` when they need refreshing.
