@@ -46,11 +46,11 @@ changing the episode is a content edit, not a markup edit.
 
 Two things there are worth knowing about:
 
-- **`episode.youtubeId` is `null`.** The design left the player as a slot
+- **`episode.youtubeId`** holds the film's video id (`_VZPpTxuO88`). The design left the player as a slot
   ("send the YouTube link and the embed drops in here"). Set the id and the
   watch section swaps its placeholder for a click-to-play
   `youtube-nocookie.com` embed — nothing loads from YouTube until someone
-  presses play. Until then it shows the still with "The film goes live here".
+  presses play. Set it to `null` and it shows the still with "Coming soon!".
 - **The map coordinates.** Each leg carries its own `path` and `node`, in the
   SVG's coordinate space, taken from the export. They are a stylised
   projection, not a real projection of the GPX.

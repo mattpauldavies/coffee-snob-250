@@ -57,11 +57,11 @@ export const episode = {
    * The film's YouTube video id. With it set, the watch section shows a
    * click-to-play embed; null falls back to the "goes live here" placeholder.
    */
-  youtubeId: 'padi2cHAwYg' as string | null,
+  youtubeId: '_VZPpTxuO88' as string | null,
   watchIntro:
     'We rode our Triumph Tiger Sports from Edinburgh to the Isle of Bute in search of amazing coffee! And you can watch the whole thing on YouTube or just ride the route yourself.',
   googleMapsUrl: 'https://maps.app.goo.gl/afijBv47iwPEdSez7',
-  youtubeUrl: 'https://www.youtube.com/@matthelenmoto',
+  youtubeUrl: 'https://youtu.be/_VZPpTxuO88',
   subscribeUrl: 'https://www.youtube.com/@matthelenmoto?sub_confirmation=1',
 } as const;
 
